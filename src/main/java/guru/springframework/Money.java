@@ -7,6 +7,8 @@ public class Money {
     public boolean equals(Object object) {
         if (object == null) return false;
         Money money = (Money) object;
-        return amount == money.amount;
+        return this.amount == money.amount &&
+                this.getClass().equals(object.getClass());
     }
+
 }
